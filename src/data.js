@@ -2,13 +2,13 @@ export const services = [
   {
     title: 'Custom Software Development',
     desc: "Bespoke systems built around how your business actually works, not the other way around.",
-    icon: 'M9 15 L12 18 L21 9',
+    icon: 'M10.68 15 L12.84 17.16 L19.32 10.68',
     color: 'oklch(52% 0.09 200)',
   },
   {
     title: 'Web App Development',
     desc: 'Fast, reliable web applications — from internal tools to customer-facing platforms.',
-    icon: 'M9 12 L21 12 M9 18 L21 18 M9 6 L21 6',
+    icon: 'M9 9 H21 V21 H9 Z M9 13 H21',
     color: 'oklch(52% 0.09 230)',
   },
   {
@@ -20,7 +20,7 @@ export const services = [
   {
     title: 'Ongoing Support & Maintenance',
     desc: 'We stay in the water with you — monitoring, fixing, and evolving what we build.',
-    icon: 'M15 8 A7 7 0 1 1 8 15',
+    icon: 'M9.93 13.15 A5.4 5.4 0 0 1 20.07 13.15 M20.07 13.15 L20.31 10.87 M20.07 13.15 L18.42 11.56 M20.07 16.85 A5.4 5.4 0 0 1 9.93 16.85 M9.93 16.85 L9.69 19.13 M9.93 16.85 L11.58 18.44',
     color: 'oklch(52% 0.09 190)',
   },
 ];
