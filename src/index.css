@@ -1,0 +1,26 @@
+:root {
+  --color-bg: oklch(98.5% 0.004 235);
+  --color-ink: oklch(22% 0.015 235);
+  --color-accent: oklch(52% 0.09 200);
+  --color-white: oklch(100% 0 0);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  background: var(--color-bg);
+}
+
+body {
+  font-family: 'Inter', Helvetica, Arial, sans-serif;
+  color: var(--color-ink);
+  overflow-x: hidden;
+}
+
+#root {
+  min-height: 100vh;
+}
