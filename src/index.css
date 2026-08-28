@@ -1,8 +1,12 @@
 :root {
-  --color-bg: oklch(98.5% 0.004 235);
-  --color-ink: oklch(22% 0.015 235);
-  --color-accent: oklch(52% 0.09 200);
-  --color-white: oklch(100% 0 0);
+  --bg: oklch(98.5% 0.004 235);
+  --bg-deep: oklch(96% 0.006 235);
+  --ink: oklch(25% 0.015 235);
+  --ink-bright: oklch(17% 0.015 235);
+  --accent: oklch(52% 0.09 200);
+  --accent-bright: oklch(45% 0.095 200);
+  --on-accent: oklch(98.5% 0.004 235);
+  --line: oklch(91% 0.006 235);
 }
 
 * {
@@ -16,15 +20,55 @@ html {
 html,
 body {
   margin: 0;
-  background: var(--color-bg);
+  background: #f6f9fa;
+  background: var(--bg);
 }
 
 body {
   font-family: 'Inter', Helvetica, Arial, sans-serif;
-  color: var(--color-ink);
+  color: var(--ink);
   overflow-x: hidden;
 }
 
 #root {
   min-height: 100vh;
+}
+
+@keyframes waveDrift {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-600px); }
+}
+
+@keyframes gridDrift {
+  0% { background-position: 0 0; }
+  100% { background-position: 0 60px; }
+}
+
+@keyframes pulseDot {
+  0%, 100% { opacity: 1; transform: scale(1); }
+  50% { opacity: 0.35; transform: scale(0.8); }
+}
+
+@keyframes glowPulse {
+  0%, 100% { opacity: 0.35; }
+  50% { opacity: 0.7; }
+}
+
+@keyframes riseIn {
+  from { opacity: 0; transform: translateY(18px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
 }
