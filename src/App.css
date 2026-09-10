@@ -80,6 +80,9 @@ h2 {
 }
 
 .btn-cta {
+  border: none;
+  cursor: pointer;
+  font-family: inherit;
   background: var(--primary);
   color: var(--on-primary);
   padding: 11px 20px;
@@ -413,6 +416,12 @@ h2 {
 }
 
 .card-link {
+  background: none;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  font-family: inherit;
+  text-align: left;
   color: var(--ink);
   text-decoration: none;
   font-size: 13.5px;
@@ -839,6 +848,12 @@ h2 {
 }
 
 .footer-cta-link {
+  background: none;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  font-family: inherit;
+  text-align: left;
   color: var(--on-dark);
   text-decoration: none;
   font-size: 14px;
@@ -850,6 +865,12 @@ h2 {
 }
 
 .footer-email {
+  background: none;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  font-family: inherit;
+  text-align: left;
   color: var(--on-dark-soft);
   text-decoration: none;
   font-size: 13px;
@@ -1026,5 +1047,161 @@ h2 {
 
   .services-grid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+/* Contact modal — native <dialog>, so the browser handles focus trap + Esc */
+
+.contact-modal {
+  border: none;
+  padding: 0;
+  background: transparent;
+  width: min(460px, calc(100% - 32px));
+  color: var(--body);
+}
+
+.contact-modal::backdrop {
+  background: rgba(15, 20, 14, 0.55);
+}
+
+.contact-modal-inner {
+  position: relative;
+  background: var(--surface-card);
+  border: 1px solid var(--hairline);
+  border-radius: 20px;
+  padding: 40px 32px 28px;
+  text-align: center;
+}
+
+.contact-modal-close {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  width: 32px;
+  height: 32px;
+  border: none;
+  border-radius: 50%;
+  background: none;
+  color: var(--muted);
+  font-size: 22px;
+  line-height: 1;
+  cursor: pointer;
+  font-family: inherit;
+  transition: background 0.2s ease, color 0.2s ease;
+}
+
+.contact-modal-close:hover {
+  background: var(--canvas-warm);
+  color: var(--ink);
+}
+
+.contact-modal h2 {
+  font-size: 22px;
+  line-height: 1.25;
+  letter-spacing: -0.5px;
+  margin: 14px 0 10px;
+}
+
+.contact-modal-copy {
+  font-size: 14.5px;
+  line-height: 1.55;
+  color: var(--body);
+  margin: 0 auto 24px;
+  max-width: 330px;
+  text-wrap: pretty;
+}
+
+.email-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  background: var(--canvas);
+  border: 1px solid var(--hairline);
+  border-radius: 12px;
+  padding: 8px 8px 8px 16px;
+  margin-bottom: 16px;
+}
+
+.email-address {
+  font-size: 14.5px;
+  font-weight: 500;
+  color: var(--ink);
+  text-align: left;
+  overflow-wrap: anywhere;
+}
+
+.copy-btn {
+  flex-shrink: 0;
+  background: var(--primary);
+  color: var(--on-primary);
+  border: none;
+  border-radius: 8px;
+  padding: 10px 18px;
+  font-size: 13px;
+  font-weight: 600;
+  font-family: inherit;
+  cursor: pointer;
+  transition: background 0.2s ease;
+}
+
+.copy-btn:hover {
+  background: var(--primary-active);
+}
+
+.mail-app-link {
+  display: inline-block;
+  font-size: 13.5px;
+  font-weight: 500;
+  color: var(--muted);
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.mail-app-link:hover {
+  color: var(--ink);
+  text-decoration: underline;
+}
+
+/* Fixed height so showing the toast doesn't shift the dialog's layout.
+   The toast lives inside the dialog on purpose: showModal() paints the
+   dialog in the top layer, so a toast rendered elsewhere would sit behind
+   the backdrop. */
+.contact-toast-slot {
+  height: 34px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 12px;
+}
+
+.contact-toast {
+  background: var(--surface-dark);
+  color: var(--on-dark);
+  font-size: 12.5px;
+  font-weight: 500;
+  padding: 8px 16px;
+  border-radius: 9999px;
+  animation: toastIn 0.2s ease-out;
+}
+
+@media (max-width: 600px) {
+  .contact-modal {
+    width: calc(100% - 24px);
+  }
+
+  .contact-modal-inner {
+    padding: 36px 20px 24px;
+  }
+
+  .email-row {
+    flex-direction: column;
+    align-items: stretch;
+    padding: 14px;
+    gap: 12px;
+  }
+
+  .email-address {
+    text-align: center;
   }
 }

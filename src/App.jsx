@@ -8,23 +8,28 @@ import TechStack from './components/TechStack.jsx';
 import About from './components/About.jsx';
 import Contact from './components/Contact.jsx';
 import Footer from './components/Footer.jsx';
+import ContactModal from './components/ContactModal.jsx';
+import { ContactModalProvider } from './ContactModalContext.jsx';
 import './App.css';
 
 export default function App() {
   return (
-    <div className="page">
-      <Header />
-      <main>
-        <Hero />
-        <Services />
-        <Approach />
-        <Process />
-        <Solutions />
-        <TechStack />
-        <About />
-        <Contact />
-      </main>
-      <Footer />
-    </div>
+    <ContactModalProvider>
+      <div className="page">
+        <Header />
+        <main>
+          <Hero />
+          <Services />
+          <Approach />
+          <Process />
+          <Solutions />
+          <TechStack />
+          <About />
+          <Contact />
+        </main>
+        <Footer />
+      </div>
+      <ContactModal />
+    </ContactModalProvider>
   );
 }

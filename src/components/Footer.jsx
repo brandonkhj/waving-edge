@@ -1,4 +1,5 @@
 import WaveLogo from './WaveLogo.jsx';
+import { useContactModal } from '../ContactModalContext.jsx';
 
 const links = [
   { href: '#top', label: 'Home' },
@@ -9,6 +10,8 @@ const links = [
 ];
 
 export default function Footer() {
+  const { open: openContact } = useContactModal();
+
   return (
     <footer className="site-footer">
       <div className="footer-inner">
@@ -29,12 +32,12 @@ export default function Footer() {
           </nav>
           <div className="footer-cta">
             <p>Let&apos;s build something useful.</p>
-            <a href="mailto:hello@wavingedge.com" className="footer-cta-link">
+            <button type="button" className="footer-cta-link" onClick={openContact}>
               Discuss your project →
-            </a>
-            <a href="mailto:hello@wavingedge.com" className="footer-email">
+            </button>
+            <button type="button" className="footer-email" onClick={openContact}>
               hello@wavingedge.com
-            </a>
+            </button>
           </div>
         </div>
         <div className="footer-bottom">

@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import WaveLogo from './WaveLogo.jsx';
+import { useContactModal } from '../ContactModalContext.jsx';
 
 const links = [
   { href: '#top', label: 'Home' },
@@ -12,6 +13,7 @@ const links = [
 export default function Header() {
   const [menuOpen, setMenuOpen] = useState(false);
   const closeMenu = () => setMenuOpen(false);
+  const { open: openContact } = useContactModal();
 
   return (
     <header className="site-header">
@@ -42,9 +44,16 @@ export default function Header() {
             {link.label}
           </a>
         ))}
-        <a href="mailto:hello@wavingedge.com" className="btn-cta" onClick={closeMenu}>
+        <button
+          type="button"
+          className="btn-cta"
+          onClick={() => {
+            closeMenu();
+            openContact();
+          }}
+        >
           Discuss your project →
-        </a>
+        </button>
       </nav>
     </header>
   );

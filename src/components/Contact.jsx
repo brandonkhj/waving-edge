@@ -1,4 +1,8 @@
+import { useContactModal } from '../ContactModalContext.jsx';
+
 export default function Contact() {
+  const { open: openContact } = useContactModal();
+
   return (
     <section id="contact" className="contact">
       <div className="final-cta">
@@ -22,9 +26,9 @@ export default function Contact() {
           Tell us what you&apos;re trying to build, improve or automate. We can help
           you work out the right technical approach before development begins.
         </p>
-        <a href="mailto:hello@wavingedge.com" className="btn btn-primary btn-dark">
+        <button type="button" className="btn btn-primary btn-dark" onClick={openContact}>
           Discuss your project →
-        </a>
+        </button>
         <p className="final-cta-email">hello@wavingedge.com</p>
       </div>
     </section>

@@ -1,6 +1,9 @@
 import { solutions } from '../data.jsx';
+import { useContactModal } from '../ContactModalContext.jsx';
 
 export default function Solutions() {
+  const { open: openContact } = useContactModal();
+
   return (
     <section id="solutions" className="solutions">
       <div className="solutions-panel">
@@ -29,9 +32,9 @@ export default function Solutions() {
             </li>
           ))}
         </ul>
-        <a href="mailto:hello@wavingedge.com" className="card-link">
+        <button type="button" className="card-link" onClick={openContact}>
           Explore all solutions →
-        </a>
+        </button>
       </div>
     </section>
   );

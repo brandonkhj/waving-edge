@@ -1,6 +1,9 @@
 import { trustPoints } from '../data.jsx';
+import { useContactModal } from '../ContactModalContext.jsx';
 
 export default function Hero() {
+  const { open: openContact } = useContactModal();
+
   return (
     <section className="hero" id="top">
       <div className="hero-grid">
@@ -13,9 +16,9 @@ export default function Hero() {
             architecture to development, launch and ongoing support.
           </p>
           <div className="hero-actions">
-            <a href="mailto:hello@wavingedge.com" className="btn btn-primary">
+            <button type="button" className="btn btn-primary" onClick={openContact}>
               Discuss your project →
-            </a>
+            </button>
             <a href="#services" className="btn btn-secondary">
               Explore our services
             </a>
