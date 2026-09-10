@@ -22,10 +22,10 @@ export default function Contact() {
           Tell us what you&apos;re trying to build, improve or automate. We can help
           you work out the right technical approach before development begins.
         </p>
-        <a href="mailto:hello@wavingedgeventure.com" className="btn btn-primary btn-dark">
+        <a href="mailto:hello@wavingedge.com" className="btn btn-primary btn-dark">
           Discuss your project →
         </a>
-        <p className="final-cta-email">hello@wavingedgeventure.com</p>
+        <p className="final-cta-email">hello@wavingedge.com</p>
       </div>
     </section>
   );

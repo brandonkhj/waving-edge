@@ -13,7 +13,7 @@ export default function Hero() {
             architecture to development, launch and ongoing support.
           </p>
           <div className="hero-actions">
-            <a href="mailto:hello@wavingedgeventure.com" className="btn btn-primary">
+            <a href="mailto:hello@wavingedge.com" className="btn btn-primary">
               Discuss your project →
             </a>
             <a href="#services" className="btn btn-secondary">

@@ -29,11 +29,11 @@ export default function Footer() {
           </nav>
           <div className="footer-cta">
             <p>Let&apos;s build something useful.</p>
-            <a href="mailto:hello@wavingedgeventure.com" className="footer-cta-link">
+            <a href="mailto:hello@wavingedge.com" className="footer-cta-link">
               Discuss your project →
             </a>
-            <a href="mailto:hello@wavingedgeventure.com" className="footer-email">
-              hello@wavingedgeventure.com
+            <a href="mailto:hello@wavingedge.com" className="footer-email">
+              hello@wavingedge.com
             </a>
           </div>
         </div>
