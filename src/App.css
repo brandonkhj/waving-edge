@@ -260,13 +260,6 @@ h2 {
   padding: 32px;
 }
 
-.hero-panel-waves {
-  position: absolute;
-  inset: 0;
-  width: 100%;
-  height: 100%;
-}
-
 .panel-photo {
   position: absolute;
   inset: 0;
@@ -275,11 +268,13 @@ h2 {
   object-fit: cover;
 }
 
+.hero-panel,
 .approach-panel,
 .solutions-panel {
   position: relative;
 }
 
+.hero-panel::after,
 .approach-panel::after,
 .solutions-panel::after {
   content: '';
@@ -298,11 +293,6 @@ h2 {
   font-weight: 400;
   font-size: 26px;
   line-height: 1.25;
-  color: var(--ink);
-}
-
-.approach-panel-caption,
-.solutions-panel-caption {
   color: var(--on-dark);
   margin: 0;
 }

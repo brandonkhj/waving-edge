@@ -34,12 +34,12 @@ export default function Hero() {
           </ul>
         </div>
 
-        <div className="hero-panel" aria-hidden="true">
-          <svg className="hero-panel-waves" width="520" height="420" viewBox="0 0 520 420" fill="none">
-            <path d="M-20 120 Q110 60 240 120 T500 120" stroke="oklch(52% 0.09 200 / 0.35)" strokeWidth="2" />
-            <path d="M-20 220 Q110 280 240 220 T500 220" stroke="oklch(45% 0.06 140 / 0.35)" strokeWidth="2" />
-            <path d="M-20 320 Q110 260 240 320 T500 320" stroke="oklch(52% 0.09 200 / 0.2)" strokeWidth="2" />
-          </svg>
+        <div className="hero-panel">
+          <img
+            src="/images/hero.jpg"
+            alt="Desk setup with an iMac and MacBook showing design and code work, a Starbucks cup, and a plant"
+            className="panel-photo"
+          />
           <p className="hero-panel-caption">
             Ideas
             <br />
