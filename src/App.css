@@ -759,11 +759,10 @@ h2 {
   background: var(--on-dark-soft);
 }
 
-.final-cta-email {
-  position: relative;
+.final-cta .final-cta-email {
   font-size: 13.5px;
-  color: var(--on-dark-soft);
-  margin: 28px 0 0;
+  max-width: none;
+  margin: 32px auto 0;
 }
 
 /* Footer */
