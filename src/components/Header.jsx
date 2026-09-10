@@ -43,7 +43,7 @@ export default function Header() {
           </a>
         ))}
         <a href="#contact-form" className="btn-cta" onClick={closeMenu}>
-          Discuss your project
+          Discuss your project →
         </a>
       </nav>
     </header>

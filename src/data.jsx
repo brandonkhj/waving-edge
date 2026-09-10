@@ -29,8 +29,9 @@ export const trustPoints = [
 export const services = [
   {
     title: 'Build a new product',
-    desc: 'Turn an idea into a practical MVP or production-ready web application without over-engineering the first version.',
-    examples: ['SaaS platforms', 'MVPs', 'Customer portals', 'Web applications'],
+    desc: 'Turn an idea into a practical MVP or production-ready web app without over-engineering the first version.',
+    examples: ['SaaS platforms', 'MVPs', 'Customer portals', 'Web apps'],
+    color: 'mint',
     icon: (
       <>
         <path d="M4.5 16.5c-1.5 1.26-2 5-2 5s3.74-.5 5-2c.71-.84.7-2.13-.09-2.91a2.18 2.18 0 0 0-2.91-.09z" />
@@ -42,7 +43,7 @@ export const services = [
   },
   {
     title: 'Digitise business operations',
-    desc: 'Replace spreadsheets, manual processes and disconnected tools with software designed around your actual workflows.',
+    desc: 'Replace spreadsheets, manual processes and disconnected tools with an app designed around your actual workflows.',
     examples: [
       'Internal management systems',
       'Booking systems',
@@ -50,6 +51,7 @@ export const services = [
       'Inventory systems',
       'Operations dashboards',
     ],
+    color: 'sky',
     icon: (
       <>
         <rect x="3" y="3" width="7" height="7" rx="1.5" />
@@ -70,6 +72,7 @@ export const services = [
       'Shopify integrations',
       'Third-party services',
     ],
+    color: 'peach',
     icon: (
       <>
         <path d="M10 13a5 5 0 0 0 7.07 0l3-3a5 5 0 0 0-7.07-7.07l-1.5 1.5" />
@@ -79,7 +82,7 @@ export const services = [
   },
   {
     title: 'Improve existing software',
-    desc: 'Modernise, extend, maintain or repair software that your business already relies on.',
+    desc: 'Modernise, extend, maintain or repair the app your business already relies on.',
     examples: [
       'Feature development',
       'UI modernisation',
@@ -87,6 +90,7 @@ export const services = [
       'Legacy system improvements',
       'Ongoing maintenance',
     ],
+    color: 'lavender',
     icon: (
       <>
         <path d="M4 20V10" />
@@ -97,107 +101,54 @@ export const services = [
   },
 ];
 
-export const solutions = [
+export const approachPoints = [
   {
-    title: 'Business systems',
-    desc: 'Custom software designed around real operational workflows.',
-    examples: [
-      'Customer management',
-      'Booking systems',
-      'Inventory',
-      'Internal administration',
-      'Reporting dashboards',
-      'Workflow management',
-    ],
+    label: 'Direct collaboration',
     icon: (
       <>
-        <path d="M8 6h13" />
-        <path d="M8 12h13" />
-        <path d="M8 18h13" />
-        <path d="M3 6h.01" />
-        <path d="M3 12h.01" />
-        <path d="M3 18h.01" />
+        <circle cx="12" cy="8" r="4" />
+        <path d="M4 21c0-4 3.6-7 8-7s8 3 8 7" />
       </>
     ),
   },
   {
-    title: 'Web products',
-    desc: 'Modern web applications and SaaS products, from idea to launch.',
-    examples: [
-      'SaaS platforms',
-      'Client portals',
-      'Subscription products',
-      'Marketplace features',
-      'Business applications',
-    ],
+    label: 'Clear communication',
     icon: (
-      <>
-        <path d="m18 16 4-4-4-4" />
-        <path d="m6 8-4 4 4 4" />
-        <path d="m14.5 4-5 16" />
-      </>
+      <path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5Z" />
     ),
   },
   {
-    title: 'E-commerce and integrations',
-    desc: 'Connect online stores and business systems with external platforms and services.',
-    examples: [
-      'Shopify development',
-      'Payment integrations',
-      'API integrations',
-      'Messaging integrations',
-      'Email infrastructure',
-      'Third-party services',
-    ],
+    label: 'Long-term value',
     icon: (
       <>
-        <circle cx="9" cy="21" r="1" />
-        <circle cx="20" cy="21" r="1" />
-        <path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6" />
-      </>
-    ),
-  },
-  {
-    title: 'Automation',
-    desc: 'Reduce repetitive work by connecting systems and automating business processes.',
-    examples: ['Workflow automation', 'Scheduled tasks', 'Data syncing', 'Notifications'],
-    icon: (
-      <>
-        <path d="M21 12a9 9 0 0 1-9 9 9.75 9.75 0 0 1-6.74-2.74L3 16" />
-        <path d="M3 12a9 9 0 0 1 9-9 9.75 9.75 0 0 1 6.74 2.74L21 8" />
-        <path d="M3 16v5h5" />
-        <path d="M16 3h5v5" />
+        <path d="M3 17l6-6 4 4 8-8" />
+        <path d="M17 7h4v4" />
       </>
     ),
   },
 ];
 
 export const steps = [
-  {
-    num: '1',
-    title: 'Understand',
-    desc: 'Discuss the business problem, workflow and requirements.',
-  },
-  {
-    num: '2',
-    title: 'Scope',
-    desc: 'Define the recommended solution, project scope and estimated effort.',
-  },
-  {
-    num: '3',
-    title: 'Build',
-    desc: 'Design and develop the product iteratively with regular feedback.',
-  },
-  {
-    num: '4',
-    title: 'Launch',
-    desc: 'Deploy, test and prepare the system for real users.',
-  },
-  {
-    num: '5',
-    title: 'Support',
-    desc: 'Continue improving, maintaining and supporting the application.',
-  },
+  { num: '1', title: 'Understand', desc: 'Discuss the business problem, workflow and requirements.' },
+  { num: '2', title: 'Scope', desc: 'Define the recommended solution, project scope and estimated effort.' },
+  { num: '3', title: 'Build', desc: 'Design and develop the app iteratively with regular feedback.' },
+  { num: '4', title: 'Launch', desc: 'Deploy, test and prepare the system for real users.' },
+  { num: '5', title: 'Support', desc: 'Continue improving, maintaining and supporting the app.' },
+];
+
+const checkIcon = (
+  <path d="M20 6 9 17l-5-5" />
+);
+
+export const solutions = [
+  { label: 'E-commerce', icon: checkIcon },
+  { label: 'SaaS products', icon: checkIcon },
+  { label: 'Business systems', icon: checkIcon },
+  { label: 'Internal tools', icon: checkIcon },
+  { label: 'Client portals', icon: checkIcon },
+  { label: 'Reporting dashboards', icon: checkIcon },
+  { label: 'Automation', icon: checkIcon },
+  { label: 'Integrations', icon: checkIcon },
 ];
 
 export const techStack = [
@@ -210,7 +161,7 @@ export const techStack = [
   'Shopify',
   'Tailwind CSS',
   'REST APIs',
-  'Cloud Infrastructure',
+  'Cloud',
 ];
 
 export const aboutPoints = [

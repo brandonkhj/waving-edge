@@ -1,23 +1,33 @@
 :root {
-  /* Cal.com-derived tokens (see DESIGN.md) */
-  --canvas: #ffffff;
-  --surface-soft: #f8f9fa;
-  --surface-card: #f5f5f5;
-  --surface-dark: #101010;
-  --surface-dark-elevated: #1a1a1a;
-  --ink: #111111;
-  --body: #374151;
-  --muted: #6b7280;
-  --muted-soft: #898989;
-  --hairline: #e5e7eb;
-  --hairline-soft: #f3f4f6;
-  --primary: #111111;
-  --primary-active: #242424;
-  --on-primary: #ffffff;
-  --on-dark: #ffffff;
-  --on-dark-soft: #a1a1aa;
+  /* Warm boutique-studio palette, matched to the reference design */
+  --canvas: #f6f2e9;
+  --canvas-warm: #efe8d8;
+  --surface-card: #fffdf8;
+  --surface-soft: #f1ebdd;
+  --surface-dark: #16231a;
+  --surface-dark-elevated: #223326;
+  --ink: #1c1d18;
+  --body: #57584e;
+  --muted: #85846f;
+  --muted-soft: #9a9884;
+  --hairline: #e4dcc8;
+  --hairline-soft: #ece5d3;
+  --primary: #16231a;
+  --primary-active: #263b2c;
+  --on-primary: #f6f2e9;
+  --on-dark: #f6f2e9;
+  --on-dark-soft: #b7c0b3;
   /* Waving Edge brand accent — logo, dots, wave flourishes only. Never on CTAs. */
   --accent: oklch(52% 0.09 200);
+  /* Badge pastels, cycled across service/solution icons */
+  --badge-mint-bg: #dcead9;
+  --badge-mint-ink: #3f7d5c;
+  --badge-sky-bg: #dbe7f0;
+  --badge-sky-ink: #3f6d94;
+  --badge-peach-bg: #f5e3cd;
+  --badge-peach-ink: #b8783c;
+  --badge-lavender-bg: #e6e0ef;
+  --badge-lavender-ink: #7a5fa0;
 }
 
 * {

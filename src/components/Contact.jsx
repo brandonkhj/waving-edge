@@ -41,7 +41,7 @@ export default function Contact() {
           you work out the right technical approach before development begins.
         </p>
         <a href="#contact-form" className="btn btn-primary btn-dark">
-          Discuss your project
+          Discuss your project →
         </a>
       </div>
 
@@ -89,7 +89,7 @@ export default function Contact() {
             </div>
           </div>
           <button type="submit" className="btn btn-primary">
-            Discuss your project
+            Discuss your project →
           </button>
         </form>
       </div>
