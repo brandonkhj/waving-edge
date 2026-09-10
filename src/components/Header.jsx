@@ -42,7 +42,7 @@ export default function Header() {
             {link.label}
           </a>
         ))}
-        <a href="#contact-form" className="btn-cta" onClick={closeMenu}>
+        <a href="mailto:hello@wavingedgeventure.com" className="btn-cta" onClick={closeMenu}>
           Discuss your project →
         </a>
       </nav>

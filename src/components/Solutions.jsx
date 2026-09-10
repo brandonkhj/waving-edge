@@ -29,7 +29,7 @@ export default function Solutions() {
             </li>
           ))}
         </ul>
-        <a href="#contact-form" className="card-link">
+        <a href="mailto:hello@wavingedgeventure.com" className="card-link">
           Explore all solutions →
         </a>
       </div>
