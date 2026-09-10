@@ -5,7 +5,11 @@ export default function Services() {
     <section id="services" className="services">
       <div className="section-head">
         <div className="eyebrow">WHAT WE DO</div>
-        <h2>Just what you need to launch and learn</h2>
+        <h2>Practical software solutions for growing businesses.</h2>
+        <p className="section-intro">
+          We help SMEs and startups build, improve and connect their software so they
+          can operate more efficiently and focus on what matters.
+        </p>
       </div>
       <div className="services-grid">
         {services.map((svc) => (
@@ -26,6 +30,7 @@ export default function Services() {
             <div>
               <h3>{svc.title}</h3>
               <p>{svc.desc}</p>
+              <p className="service-examples">{svc.examples.join(' · ')}</p>
             </div>
           </div>
         ))}

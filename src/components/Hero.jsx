@@ -1,58 +1,37 @@
-import { stats } from '../data.jsx';
+import { trustPoints } from '../data.jsx';
 
 export default function Hero() {
   return (
-    <section className="hero">
+    <section className="hero" id="top">
       <div className="hero-content">
         <div className="hero-badge">
           <span className="hero-badge-dot" />
-          GET YOUR FIRST IDEA LIVE
+          SOFTWARE FOR REAL BUSINESSES
         </div>
-        <h1 className="hero-title">Start small. Prove it works. Then grow.</h1>
+        <h1 className="hero-title">Software built around your business.</h1>
         <p className="hero-subcopy">
-          No bloated quotes, no features you don&apos;t need. We build a lean, working
-          version of your idea for a fraction of the usual cost — so you can test it in
-          the real market before spending more.
+          We design and develop web applications, internal systems and digital products
+          for businesses that need more than an off-the-shelf solution. From idea and
+          architecture to development, launch and ongoing support.
         </p>
         <div className="hero-actions">
-          <a href="#contact" className="btn btn-primary">
-            Start a project
+          <a href="#contact-form" className="btn btn-primary">
+            Discuss your project
           </a>
           <a href="#services" className="btn btn-secondary">
-            See services
+            Explore our services
           </a>
         </div>
-      </div>
-
-      <div className="stats-panel">
-        <svg
-          width="1800"
-          height="280"
-          viewBox="0 0 1800 280"
-          className="stats-waves"
-          aria-hidden="true"
-        >
-          <path
-            d="M0 190 Q150 130 300 190 T600 190 T900 190 T1200 190 T1500 190 T1800 190"
-            stroke="oklch(52% 0.09 200 / 0.45)"
-            strokeWidth="1.5"
-            fill="none"
-          />
-          <path
-            d="M0 230 Q150 280 300 230 T600 230 T900 230 T1200 230 T1500 230 T1800 230"
-            stroke="oklch(75% 0.03 210 / 0.5)"
-            strokeWidth="1.5"
-            fill="none"
-          />
-        </svg>
-        <div className="stats-grid">
-          {stats.map((stat) => (
-            <div className="stat" key={stat.label}>
-              <div className="stat-value">{stat.value}</div>
-              <div className="stat-label">{stat.label}</div>
-            </div>
+        <ul className="trust-row">
+          {trustPoints.map((point) => (
+            <li key={point.label}>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                {point.icon}
+              </svg>
+              {point.label}
+            </li>
           ))}
-        </div>
+        </ul>
       </div>
     </section>
   );
