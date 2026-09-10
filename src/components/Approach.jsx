@@ -23,7 +23,12 @@ export default function Approach() {
         </ul>
       </div>
 
-      <div className="approach-panel" aria-hidden="true">
+      <div className="approach-panel">
+        <img
+          src="/images/approach.jpg"
+          alt="MacBook Pro on a desk beside a white iMac and Magic Mouse"
+          className="panel-photo"
+        />
         <p className="approach-panel-caption">Good Software Better Business</p>
       </div>
     </section>

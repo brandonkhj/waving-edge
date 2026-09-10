@@ -3,7 +3,12 @@ import { solutions } from '../data.jsx';
 export default function Solutions() {
   return (
     <section id="solutions" className="solutions">
-      <div className="solutions-panel" aria-hidden="true">
+      <div className="solutions-panel">
+        <img
+          src="/images/solutions.jpg"
+          alt="Green plant near a laptop computer"
+          className="panel-photo"
+        />
         <p className="solutions-panel-caption">From ideas to real solutions</p>
       </div>
 

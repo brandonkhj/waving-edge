@@ -267,16 +267,43 @@ h2 {
   height: 100%;
 }
 
+.panel-photo {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.approach-panel,
+.solutions-panel {
+  position: relative;
+}
+
+.approach-panel::after,
+.solutions-panel::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(0deg, rgba(15, 20, 14, 0.65) 0%, rgba(15, 20, 14, 0) 45%);
+}
+
 .hero-panel-caption,
 .approach-panel-caption,
 .solutions-panel-caption {
   position: relative;
+  z-index: 1;
   font-family: 'Fraunces', 'Space Grotesk', serif;
   font-style: italic;
   font-weight: 400;
   font-size: 26px;
   line-height: 1.25;
   color: var(--ink);
+}
+
+.approach-panel-caption,
+.solutions-panel-caption {
+  color: var(--on-dark);
   margin: 0;
 }
 
