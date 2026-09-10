@@ -3,9 +3,6 @@ import { stats } from '../data.jsx';
 export default function Hero() {
   return (
     <section className="hero">
-      <div className="hero-grid-bg" aria-hidden="true" />
-      <div className="hero-glow" aria-hidden="true" />
-
       <div className="hero-content">
         <div className="hero-badge">
           <span className="hero-badge-dot" />
@@ -37,19 +34,13 @@ export default function Hero() {
         >
           <path
             d="M0 190 Q150 130 300 190 T600 190 T900 190 T1200 190 T1500 190 T1800 190"
-            stroke="oklch(52% 0.09 200 / 0.5)"
-            strokeWidth="2"
+            stroke="oklch(52% 0.09 200 / 0.45)"
+            strokeWidth="1.5"
             fill="none"
           />
           <path
             d="M0 230 Q150 280 300 230 T600 230 T900 230 T1200 230 T1500 230 T1800 230"
-            stroke="oklch(75% 0.03 210 / 0.6)"
-            strokeWidth="2"
-            fill="none"
-          />
-          <path
-            d="M0 150 Q150 90 300 150 T600 150 T900 150 T1200 150 T1500 150 T1800 150"
-            stroke="oklch(85% 0.02 210 / 0.5)"
+            stroke="oklch(75% 0.03 210 / 0.5)"
             strokeWidth="1.5"
             fill="none"
           />

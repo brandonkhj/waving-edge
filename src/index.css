@@ -1,12 +1,23 @@
 :root {
-  --bg: oklch(98.5% 0.004 235);
-  --bg-deep: oklch(96% 0.006 235);
-  --ink: oklch(25% 0.015 235);
-  --ink-bright: oklch(17% 0.015 235);
+  /* Cal.com-derived tokens (see DESIGN.md) */
+  --canvas: #ffffff;
+  --surface-soft: #f8f9fa;
+  --surface-card: #f5f5f5;
+  --surface-dark: #101010;
+  --surface-dark-elevated: #1a1a1a;
+  --ink: #111111;
+  --body: #374151;
+  --muted: #6b7280;
+  --muted-soft: #898989;
+  --hairline: #e5e7eb;
+  --hairline-soft: #f3f4f6;
+  --primary: #111111;
+  --primary-active: #242424;
+  --on-primary: #ffffff;
+  --on-dark: #ffffff;
+  --on-dark-soft: #a1a1aa;
+  /* Waving Edge brand accent — logo, dots, wave flourishes only. Never on CTAs. */
   --accent: oklch(52% 0.09 200);
-  --accent-bright: oklch(45% 0.095 200);
-  --on-accent: oklch(98.5% 0.004 235);
-  --line: oklch(91% 0.006 235);
 }
 
 * {
@@ -20,13 +31,12 @@ html {
 html,
 body {
   margin: 0;
-  background: #f6f9fa;
-  background: var(--bg);
+  background: var(--canvas);
 }
 
 body {
-  font-family: 'Inter', Helvetica, Arial, sans-serif;
-  color: var(--ink);
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  color: var(--body);
   overflow-x: hidden;
 }
 
@@ -39,23 +49,13 @@ body {
   100% { transform: translateX(-600px); }
 }
 
-@keyframes gridDrift {
-  0% { background-position: 0 0; }
-  100% { background-position: 0 60px; }
-}
-
 @keyframes pulseDot {
   0%, 100% { opacity: 1; transform: scale(1); }
   50% { opacity: 0.35; transform: scale(0.8); }
 }
 
-@keyframes glowPulse {
-  0%, 100% { opacity: 0.35; }
-  50% { opacity: 0.7; }
-}
-
 @keyframes riseIn {
-  from { opacity: 0; transform: translateY(18px); }
+  from { opacity: 0; transform: translateY(14px); }
   to { opacity: 1; transform: translateY(0); }
 }
 
