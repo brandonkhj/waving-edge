@@ -1,12 +1,33 @@
 :root {
-  --bg: oklch(98.5% 0.004 235);
-  --bg-deep: oklch(96% 0.006 235);
-  --ink: oklch(25% 0.015 235);
-  --ink-bright: oklch(17% 0.015 235);
+  /* Warm boutique-studio palette, matched to the reference design */
+  --canvas: #f6f2e9;
+  --canvas-warm: #efe8d8;
+  --surface-card: #fffdf8;
+  --surface-soft: #f1ebdd;
+  --surface-dark: #16231a;
+  --surface-dark-elevated: #223326;
+  --ink: #1c1d18;
+  --body: #57584e;
+  --muted: #85846f;
+  --muted-soft: #9a9884;
+  --hairline: #e4dcc8;
+  --hairline-soft: #ece5d3;
+  --primary: #16231a;
+  --primary-active: #263b2c;
+  --on-primary: #f6f2e9;
+  --on-dark: #f6f2e9;
+  --on-dark-soft: #b7c0b3;
+  /* Waving Edge brand accent — logo, dots, wave flourishes only. Never on CTAs. */
   --accent: oklch(52% 0.09 200);
-  --accent-bright: oklch(45% 0.095 200);
-  --on-accent: oklch(98.5% 0.004 235);
-  --line: oklch(91% 0.006 235);
+  /* Badge pastels, cycled across service/solution icons */
+  --badge-mint-bg: #dcead9;
+  --badge-mint-ink: #3f7d5c;
+  --badge-sky-bg: #dbe7f0;
+  --badge-sky-ink: #3f6d94;
+  --badge-peach-bg: #f5e3cd;
+  --badge-peach-ink: #b8783c;
+  --badge-lavender-bg: #e6e0ef;
+  --badge-lavender-ink: #7a5fa0;
 }
 
 * {
@@ -20,13 +41,12 @@ html {
 html,
 body {
   margin: 0;
-  background: #f6f9fa;
-  background: var(--bg);
+  background: var(--canvas);
 }
 
 body {
-  font-family: 'Inter', Helvetica, Arial, sans-serif;
-  color: var(--ink);
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  color: var(--body);
   overflow-x: hidden;
 }
 
@@ -39,23 +59,13 @@ body {
   100% { transform: translateX(-600px); }
 }
 
-@keyframes gridDrift {
-  0% { background-position: 0 0; }
-  100% { background-position: 0 60px; }
-}
-
 @keyframes pulseDot {
   0%, 100% { opacity: 1; transform: scale(1); }
   50% { opacity: 0.35; transform: scale(0.8); }
 }
 
-@keyframes glowPulse {
-  0%, 100% { opacity: 0.35; }
-  50% { opacity: 0.7; }
-}
-
 @keyframes riseIn {
-  from { opacity: 0; transform: translateY(18px); }
+  from { opacity: 0; transform: translateY(14px); }
   to { opacity: 1; transform: translateY(0); }
 }
 

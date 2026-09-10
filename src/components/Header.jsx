@@ -2,9 +2,11 @@ import { useState } from 'react';
 import WaveLogo from './WaveLogo.jsx';
 
 const links = [
+  { href: '#top', label: 'Home' },
   { href: '#services', label: 'Services' },
-  { href: '#process', label: 'Process' },
-  { href: '#faq', label: 'FAQ' },
+  { href: '#solutions', label: 'Solutions' },
+  { href: '#about', label: 'About' },
+  { href: '#contact', label: 'Contact' },
 ];
 
 export default function Header() {
@@ -40,8 +42,8 @@ export default function Header() {
             {link.label}
           </a>
         ))}
-        <a href="#contact" className="btn-cta" onClick={closeMenu}>
-          Start a project
+        <a href="mailto:hello@wavingedgeventure.com" className="btn-cta" onClick={closeMenu}>
+          Discuss your project →
         </a>
       </nav>
     </header>

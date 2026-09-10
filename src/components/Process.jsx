@@ -6,7 +6,7 @@ export default function Process() {
       <div className="process-inner">
         <div className="section-head">
           <div className="eyebrow">HOW IT WORKS</div>
-          <h2>From your idea to something people can use</h2>
+          <h2>A simple and transparent process.</h2>
         </div>
         <div className="process-grid">
           {steps.map((step) => (

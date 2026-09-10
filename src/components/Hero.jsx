@@ -1,66 +1,52 @@
-import { stats } from '../data.jsx';
+import { trustPoints } from '../data.jsx';
 
 export default function Hero() {
   return (
-    <section className="hero">
-      <div className="hero-grid-bg" aria-hidden="true" />
-      <div className="hero-glow" aria-hidden="true" />
-
-      <div className="hero-content">
-        <div className="hero-badge">
-          <span className="hero-badge-dot" />
-          GET YOUR FIRST IDEA LIVE
+    <section className="hero" id="top">
+      <div className="hero-grid">
+        <div className="hero-content">
+          <div className="eyebrow">SOFTWARE FOR REAL BUSINESS</div>
+          <h1 className="hero-title">Software built around your business.</h1>
+          <p className="hero-subcopy">
+            We design and develop web apps, internal systems and digital products for
+            businesses that need more than an off-the-shelf solution. From idea and
+            architecture to development, launch and ongoing support.
+          </p>
+          <div className="hero-actions">
+            <a href="mailto:hello@wavingedgeventure.com" className="btn btn-primary">
+              Discuss your project →
+            </a>
+            <a href="#services" className="btn btn-secondary">
+              Explore our services
+            </a>
+          </div>
+          <ul className="trust-row">
+            {trustPoints.map((point) => (
+              <li key={point.label}>
+                <span className="trust-icon">
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                    {point.icon}
+                  </svg>
+                </span>
+                {point.label}
+              </li>
+            ))}
+          </ul>
         </div>
-        <h1 className="hero-title">Start small. Prove it works. Then grow.</h1>
-        <p className="hero-subcopy">
-          No bloated quotes, no features you don&apos;t need. We build a lean, working
-          version of your idea for a fraction of the usual cost — so you can test it in
-          the real market before spending more.
-        </p>
-        <div className="hero-actions">
-          <a href="#contact" className="btn btn-primary">
-            Start a project
-          </a>
-          <a href="#services" className="btn btn-secondary">
-            See services
-          </a>
-        </div>
-      </div>
 
-      <div className="stats-panel">
-        <svg
-          width="1800"
-          height="280"
-          viewBox="0 0 1800 280"
-          className="stats-waves"
-          aria-hidden="true"
-        >
-          <path
-            d="M0 190 Q150 130 300 190 T600 190 T900 190 T1200 190 T1500 190 T1800 190"
-            stroke="oklch(52% 0.09 200 / 0.5)"
-            strokeWidth="2"
-            fill="none"
+        <div className="hero-panel">
+          <img
+            src="/images/hero.jpg"
+            alt="Desk setup with an iMac and MacBook showing design and code work, a Starbucks cup, and a plant"
+            className="panel-photo"
           />
-          <path
-            d="M0 230 Q150 280 300 230 T600 230 T900 230 T1200 230 T1500 230 T1800 230"
-            stroke="oklch(75% 0.03 210 / 0.6)"
-            strokeWidth="2"
-            fill="none"
-          />
-          <path
-            d="M0 150 Q150 90 300 150 T600 150 T900 150 T1200 150 T1500 150 T1800 150"
-            stroke="oklch(85% 0.02 210 / 0.5)"
-            strokeWidth="1.5"
-            fill="none"
-          />
-        </svg>
-        <div className="stats-grid">
-          {stats.map((stat) => (
-            <div className="stat" key={stat.label}>
-              <div className="stat-value">{stat.value}</div>
-              <div className="stat-label">{stat.label}</div>
-            </div>
-          ))}
+          <p className="hero-panel-caption">
+            Ideas
+            <br />
+            Systems
+            <br />
+            Better ways
+          </p>
         </div>
       </div>
     </section>

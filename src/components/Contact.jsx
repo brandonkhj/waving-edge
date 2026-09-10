@@ -1,12 +1,12 @@
 export default function Contact() {
   return (
     <section id="contact" className="contact">
-      <div className="contact-card">
+      <div className="final-cta">
         <svg
           width="1800"
           height="120"
           viewBox="0 0 1800 120"
-          className="contact-waves"
+          className="final-cta-waves"
           aria-hidden="true"
         >
           <path
@@ -16,11 +16,16 @@ export default function Contact() {
             fill="none"
           />
         </svg>
-        <h2>Ready to test your idea?</h2>
-        <p>Tell us about your project — we&apos;ll follow up within a day.</p>
-        <a href="mailto:hello@wavingedgeventure.com" className="btn-contact">
-          hello@wavingedgeventure.com
+        <span className="eyebrow eyebrow-dark">LET'S BUILD TOGETHER</span>
+        <h2>Have a software project in mind?</h2>
+        <p>
+          Tell us what you&apos;re trying to build, improve or automate. We can help
+          you work out the right technical approach before development begins.
+        </p>
+        <a href="mailto:hello@wavingedgeventure.com" className="btn btn-primary btn-dark">
+          Discuss your project →
         </a>
+        <p className="final-cta-email">hello@wavingedgeventure.com</p>
       </div>
     </section>
   );
