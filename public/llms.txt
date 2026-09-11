@@ -1,0 +1,50 @@
+# Waving Edge Venture
+
+> An independent software development studio in Malaysia, working with SMEs and startups
+> internationally. We build custom web apps, internal business systems, SaaS products,
+> integrations and automation for businesses that need more than an off-the-shelf solution.
+> We work directly with clients from requirements and architecture through development,
+> deployment and long-term support — no agency layers.
+
+- Website: https://www.wavingedge.com/
+- Contact: hello@wavingedge.com
+- Based in Malaysia; works with clients internationally
+- Engagement model: independent studio, direct collaboration with the people building your software
+
+## Services
+
+- **Build a new product**: Turn an idea into a practical MVP or production-ready web app without
+  over-engineering the first version. SaaS platforms, MVPs, customer portals, web apps.
+- **Digitise business operations**: Replace spreadsheets, manual processes and disconnected tools
+  with software designed around actual workflows. Internal management systems, booking systems,
+  rental systems, inventory systems, operations dashboards.
+- **Integrations and automation**: Connect existing systems and remove repetitive manual work.
+  API integrations, payment gateways, SMS/messaging, email systems, Shopify integrations,
+  third-party services.
+- **Improve existing software**: Modernise, extend, maintain or repair software a business already
+  relies on. Feature development, UI modernisation, performance improvements, legacy system
+  improvements, ongoing maintenance.
+
+## Solutions
+
+E-commerce, SaaS products, business systems, internal tools, client portals, reporting dashboards,
+automation, integrations.
+
+## Process
+
+1. **Understand** — Discuss the business problem, workflow and requirements.
+2. **Scope** — Define the recommended solution, project scope and estimated effort.
+3. **Build** — Design and develop the app iteratively with regular feedback.
+4. **Launch** — Deploy, test and prepare the system for real users.
+5. **Support** — Continue improving, maintaining and supporting the app.
+
+## Technologies
+
+Laravel, PHP, React, Next.js, TypeScript, MySQL, Shopify, Tailwind CSS, REST APIs, cloud
+infrastructure. Tools are chosen per project for stability, performance and long-term
+maintainability.
+
+## Contact
+
+Email hello@wavingedge.com with what you are trying to build, improve or automate. Typical
+response within one business day.
