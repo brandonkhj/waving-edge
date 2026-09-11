@@ -1,10 +1,19 @@
 import { StrictMode } from 'react';
-import { createRoot } from 'react-dom/client';
+import { createRoot, hydrateRoot } from 'react-dom/client';
 import App from './App.jsx';
 import './index.css';
 
-createRoot(document.getElementById('root')).render(
+const container = document.getElementById('root');
+const app = (
   <StrictMode>
     <App />
-  </StrictMode>,
+  </StrictMode>
 );
+
+// Production builds ship pre-rendered markup (see scripts/prerender.mjs), so they
+// hydrate. `npm run dev` serves an empty root, so it mounts fresh.
+if (container.hasChildNodes()) {
+  hydrateRoot(container, app);
+} else {
+  createRoot(container).render(app);
+}
