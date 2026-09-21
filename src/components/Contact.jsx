@@ -15,7 +15,7 @@ export default function Contact() {
         >
           <path
             d="M0 70 Q150 30 300 70 T600 70 T900 70 T1200 70 T1500 70 T1800 70"
-            stroke="oklch(52% 0.09 200)"
+            stroke="#15d1c1"
             strokeWidth="2"
             fill="none"
           />

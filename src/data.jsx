@@ -31,7 +31,7 @@ export const services = [
     title: 'Build a new product',
     desc: 'Turn an idea into a practical MVP or production-ready web app without over-engineering the first version.',
     examples: ['SaaS platforms', 'MVPs', 'Customer portals', 'Web apps'],
-    color: 'mint',
+    color: 'teal',
     icon: (
       <>
         <path d="M4.5 16.5c-1.5 1.26-2 5-2 5s3.74-.5 5-2c.71-.84.7-2.13-.09-2.91a2.18 2.18 0 0 0-2.91-.09z" />
@@ -51,7 +51,7 @@ export const services = [
       'Inventory systems',
       'Operations dashboards',
     ],
-    color: 'sky',
+    color: 'cyan',
     icon: (
       <>
         <rect x="3" y="3" width="7" height="7" rx="1.5" />
@@ -72,7 +72,7 @@ export const services = [
       'Shopify integrations',
       'Third-party services',
     ],
-    color: 'peach',
+    color: 'blue',
     icon: (
       <>
         <path d="M10 13a5 5 0 0 0 7.07 0l3-3a5 5 0 0 0-7.07-7.07l-1.5 1.5" />
@@ -90,7 +90,7 @@ export const services = [
       'Legacy system improvements',
       'Ongoing maintenance',
     ],
-    color: 'lavender',
+    color: 'indigo',
     icon: (
       <>
         <path d="M4 20V10" />

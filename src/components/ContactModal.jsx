@@ -82,7 +82,7 @@ export default function ContactModal() {
           &times;
         </button>
 
-        <WaveLogo />
+        <WaveLogo height={38} />
 
         <h2 id="contact-modal-title">Let&apos;s talk about your project</h2>
         <p className="contact-modal-copy">
