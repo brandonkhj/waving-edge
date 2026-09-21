@@ -833,6 +833,12 @@ h2 {
   color: var(--on-dark);
 }
 
+/* Sits inside the copyright line and inherits its styling; the only job here
+   is keeping the 12 digits from breaking across lines. */
+.footer-reg {
+  white-space: nowrap;
+}
+
 .footer-tagline {
   font-size: 14px;
   line-height: 1.5;

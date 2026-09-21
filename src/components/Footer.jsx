@@ -42,7 +42,8 @@ export default function Footer() {
         </div>
         <div className="footer-bottom">
           <span className="footer-copyright">
-            © 2026 Waving Edge Venture. All rights reserved.
+            © 2026 Waving Edge Venture <span className="footer-reg">202503077564</span>. All
+            rights reserved.
           </span>
         </div>
       </div>
