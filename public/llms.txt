@@ -44,6 +44,15 @@ Laravel, PHP, React, Next.js, TypeScript, MySQL, Shopify, Tailwind CSS, REST API
 infrastructure. Tools are chosen per project for stability, performance and long-term
 maintainability.
 
+## Legal entity
+
+- Registered name: WAVING EDGE VENTURE
+- Registration number: 202503077564 (formerly 003710951-H)
+- Registered with: Suruhanjaya Syarikat Malaysia (SSM), Companies Commission of Malaysia
+- Entity type: Registered business (ROB) — not a Sdn Bhd / private limited company
+- Status: Active
+- Jurisdiction: Malaysia
+
 ## Contact
 
 Email hello@wavingedge.com with what you are trying to build, improve or automate. Typical
