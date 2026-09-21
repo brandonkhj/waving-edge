@@ -33,6 +33,19 @@ h2 {
   display: flex;
   align-items: center;
   gap: 10px;
+  text-decoration: none;
+  color: inherit;
+  transition: opacity 0.18s ease;
+}
+
+.brand:hover {
+  opacity: 0.8;
+}
+
+.brand:focus-visible {
+  outline: 2px solid var(--primary);
+  outline-offset: 6px;
+  border-radius: 4px;
 }
 
 .wave-logo {
@@ -822,6 +835,32 @@ h2 {
   flex-direction: column;
   align-items: flex-start;
   gap: 10px;
+}
+
+/* The logo and wordmark are one link back to the top; the tagline below stays
+   outside it. Unlike the header lockup this one stacks, so the link repeats
+   .footer-brand's column layout and 10px gap — wrapping the two children in an
+   element must not reflow them into a row. */
+.footer-brand-link {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 10px;
+  text-decoration: none;
+  color: inherit;
+  transition: opacity 0.18s ease;
+}
+
+.footer-brand-link:hover {
+  opacity: 0.8;
+}
+
+.footer-brand-link:focus-visible {
+  /* On --surface-dark the accent measures 9.29:1, so it is safe here; it would
+     not be on the light header, which uses --primary instead. */
+  outline: 2px solid var(--accent);
+  outline-offset: 6px;
+  border-radius: 4px;
 }
 
 .footer-brand-name {

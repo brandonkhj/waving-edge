@@ -17,13 +17,13 @@ export default function Header() {
 
   return (
     <header className="site-header">
-      <div className="brand">
-        <WaveLogo />
-        <div className="brand-name">
+      <a className="brand" href="#top" onClick={closeMenu}>
+        <WaveLogo alt="" />
+        <span className="brand-name">
           <span className="brand-title">Waving Edge</span>
           <span className="brand-subtitle">VENTURE</span>
-        </div>
-      </div>
+        </span>
+      </a>
 
       <button
         type="button"
