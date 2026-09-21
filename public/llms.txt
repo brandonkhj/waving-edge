@@ -49,7 +49,7 @@ maintainability.
 - Registered name: WAVING EDGE VENTURE
 - Registration number: 202503077564 (formerly 003710951-H)
 - Registered with: Suruhanjaya Syarikat Malaysia (SSM), Companies Commission of Malaysia
-- Entity type: Registered business (ROB) — not a Sdn Bhd / private limited company
+- Entity type: Registered business (ROB)
 - Status: Active
 - Jurisdiction: Malaysia
 
