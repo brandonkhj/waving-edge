@@ -4,16 +4,15 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="robots" content="noindex" />
-    <meta name="theme-color" content="#f6f2e9" />
-    <link rel="icon" href="/favicon.ico" sizes="48x48" />
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="theme-color" content="#f8fafc" />
+    <link rel="icon" href="/favicon.ico" sizes="16x16 32x32 48x48" />
     <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
     <title>Page not found — Waving Edge Venture</title>
 
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600&family=Fraunces:ital,wght@1,400;1,500&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Sora:wght@400;500;600;700&family=Inter:wght@400;500;600&display=swap"
       rel="stylesheet"
     />
 
@@ -24,16 +23,16 @@
     -->
     <style>
       :root {
-        --canvas: #f6f2e9;
-        --surface-card: #fffdf8;
-        --ink: #1c1d18;
-        --body: #57584e;
-        --muted: #85846f;
-        --hairline: #e4dcc8;
-        --primary: #16231a;
-        --primary-active: #263b2c;
-        --on-primary: #f6f2e9;
-        --accent: oklch(52% 0.09 200);
+        --canvas: #f8fafc;
+        --surface-card: #ffffff;
+        --ink: #0f172a;
+        --body: #475569;
+        --muted: #64748b;
+        --hairline: #e2e8f0;
+        --primary: #0b7c7a;
+        --primary-active: #09615f;
+        --on-primary: #f8fafc;
+        --accent: #15d1c1;
       }
 
       * {
@@ -76,7 +75,7 @@
       }
 
       .brand-title {
-        font-family: 'Space Grotesk', sans-serif;
+        font-family: 'Sora', sans-serif;
         font-weight: 600;
         font-size: 16px;
         letter-spacing: 0.02em;
@@ -92,7 +91,7 @@
       }
 
       .code {
-        font-family: 'Space Grotesk', sans-serif;
+        font-family: 'Sora', sans-serif;
         font-size: clamp(72px, 16vw, 140px);
         font-weight: 600;
         line-height: 1;
@@ -103,15 +102,17 @@
       }
 
       .accent {
-        font-family: 'Fraunces', Georgia, serif;
-        font-style: italic;
-        font-size: 17px;
-        color: var(--accent);
+        font-family: 'Sora', sans-serif;
+        font-weight: 500;
+        font-size: 15px;
+        letter-spacing: 0.02em;
+        /* Deep Teal, not Aqua: aqua is 1.84:1 on this canvas and fails AA */
+        color: var(--primary);
         margin: 0 0 20px;
       }
 
       h1 {
-        font-family: 'Space Grotesk', 'Inter', sans-serif;
+        font-family: 'Sora', 'Inter', sans-serif;
         font-size: clamp(26px, 4.5vw, 38px);
         font-weight: 600;
         line-height: 1.15;
@@ -221,15 +222,7 @@
   </head>
   <body>
     <a class="brand" href="/">
-      <svg width="34" height="22" viewBox="0 0 34 22" aria-hidden="true">
-        <path
-          d="M2 14 Q9 4 17 14 T32 14"
-          stroke="oklch(52% 0.09 200)"
-          stroke-width="2.5"
-          fill="none"
-          stroke-linecap="round"
-        />
-      </svg>
+      <img src="/logo.png" alt="" width="79" height="34" style="width: 79px; height: 34px" />
       <span class="brand-name">
         <span class="brand-title">Waving Edge</span>
         <span class="brand-subtitle">VENTURE</span>
@@ -267,13 +260,13 @@
     >
       <path
         d="M0 70 Q150 30 300 70 T600 70 T900 70 T1200 70 T1500 70 T1800 70"
-        stroke="oklch(52% 0.09 200)"
+        stroke="#15d1c1"
         stroke-width="2"
         fill="none"
       />
       <path
         d="M0 95 Q150 55 300 95 T600 95 T900 95 T1200 95 T1500 95 T1800 95"
-        stroke="#e4dcc8"
+        stroke="#e2e8f0"
         stroke-width="2"
         fill="none"
       />

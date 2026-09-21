@@ -17,7 +17,7 @@ export default function Footer() {
       <div className="footer-inner">
         <div className="footer-grid">
           <div className="footer-brand">
-            <WaveLogo width={28} height={18} />
+            <WaveLogo height={30} onDark />
             <span className="footer-brand-name">Waving Edge Venture</span>
             <p className="footer-tagline">
               Custom software development for businesses in Malaysia and beyond.

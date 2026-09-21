@@ -8,7 +8,7 @@ section {
 
 h1,
 h2 {
-  font-family: 'Space Grotesk', 'Inter', sans-serif;
+  font-family: 'Sora', 'Inter', sans-serif;
   font-weight: 600;
   color: var(--ink);
 }
@@ -46,7 +46,7 @@ h2 {
 }
 
 .brand-title {
-  font-family: 'Space Grotesk', sans-serif;
+  font-family: 'Sora', sans-serif;
   font-weight: 600;
   font-size: 16px;
   letter-spacing: 0.02em;
@@ -139,6 +139,30 @@ h2 {
   max-width: 1240px;
   margin: 0 auto;
   padding: 0 48px;
+  position: relative;
+}
+
+/* Brand "wave forward" pattern as a soft backdrop. Faded and masked so it sits
+   behind the copy without competing with it. */
+.hero::before {
+  content: '';
+  position: absolute;
+  top: -72px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100vw;               /* full-bleed: clipping to the 1240px container left a hard edge */
+  height: 660px;
+  background: url('/pattern.webp') center top / cover no-repeat;
+  opacity: 0.42;
+  -webkit-mask-image: linear-gradient(180deg, #000 0%, rgba(0, 0, 0, 0.45) 55%, transparent 100%);
+  mask-image: linear-gradient(180deg, #000 0%, rgba(0, 0, 0, 0.45) 55%, transparent 100%);
+  pointer-events: none;
+  z-index: 0;
+}
+
+.hero-grid {
+  position: relative;
+  z-index: 1;
 }
 
 .hero-grid {
@@ -252,7 +276,7 @@ h2 {
   position: relative;
   border-radius: 20px;
   overflow: hidden;
-  background: linear-gradient(155deg, var(--canvas-warm), var(--surface-soft) 60%, var(--badge-mint-bg));
+  background: linear-gradient(155deg, var(--canvas-warm), var(--surface-soft) 60%, var(--badge-teal-bg));
   border: 1px solid var(--hairline);
 }
 
@@ -283,7 +307,7 @@ h2 {
   content: '';
   position: absolute;
   inset: 0;
-  background: linear-gradient(0deg, rgba(15, 20, 14, 0.65) 0%, rgba(15, 20, 14, 0) 45%);
+  background: linear-gradient(0deg, rgba(15, 23, 42, 0.68) 0%, rgba(15, 23, 42, 0) 45%);
 }
 
 .hero-panel-caption,
@@ -291,10 +315,10 @@ h2 {
 .solutions-panel-caption {
   position: relative;
   z-index: 1;
-  font-family: 'Fraunces', 'Space Grotesk', serif;
-  font-style: italic;
-  font-weight: 400;
-  font-size: 26px;
+  font-family: 'Sora', 'Inter', sans-serif;
+  font-weight: 500;
+  font-size: 25px;
+  letter-spacing: -0.3px;
   line-height: 1.25;
   color: var(--on-dark);
   margin: 0;
@@ -390,14 +414,14 @@ h2 {
   margin-bottom: 14px;
 }
 
-.badge-mint { background: var(--badge-mint-bg); }
-.badge-mint svg { stroke: var(--badge-mint-ink); }
-.badge-sky { background: var(--badge-sky-bg); }
-.badge-sky svg { stroke: var(--badge-sky-ink); }
-.badge-peach { background: var(--badge-peach-bg); }
-.badge-peach svg { stroke: var(--badge-peach-ink); }
-.badge-lavender { background: var(--badge-lavender-bg); }
-.badge-lavender svg { stroke: var(--badge-lavender-ink); }
+.badge-teal { background: var(--badge-teal-bg); }
+.badge-teal svg { stroke: var(--badge-teal-ink); }
+.badge-cyan { background: var(--badge-cyan-bg); }
+.badge-cyan svg { stroke: var(--badge-cyan-ink); }
+.badge-blue { background: var(--badge-blue-bg); }
+.badge-blue svg { stroke: var(--badge-blue-ink); }
+.badge-indigo { background: var(--badge-indigo-bg); }
+.badge-indigo svg { stroke: var(--badge-indigo-ink); }
 
 .service-card h3 {
   font-size: 16.5px;
@@ -489,7 +513,7 @@ h2 {
   display: flex;
   align-items: flex-end;
   padding: 32px;
-  background: linear-gradient(160deg, var(--badge-sky-bg), var(--canvas-warm) 55%, var(--surface-soft));
+  background: linear-gradient(160deg, var(--badge-cyan-bg), var(--canvas-warm) 55%, var(--surface-soft));
 }
 
 /* Process */
@@ -545,7 +569,7 @@ h2 {
   justify-content: center;
   font-size: 12px;
   font-weight: 600;
-  font-family: 'Space Grotesk', sans-serif;
+  font-family: 'Sora', sans-serif;
 }
 
 .process-step h3 {
@@ -581,7 +605,7 @@ h2 {
   display: flex;
   align-items: flex-end;
   padding: 32px;
-  background: linear-gradient(160deg, var(--badge-peach-bg), var(--canvas-warm) 55%, var(--badge-mint-bg));
+  background: linear-gradient(160deg, var(--badge-blue-bg), var(--canvas-warm) 55%, var(--badge-teal-bg));
 }
 
 .solutions-copy h2 {
@@ -618,7 +642,7 @@ h2 {
 }
 
 .solutions-list svg {
-  stroke: var(--badge-mint-ink);
+  stroke: var(--badge-teal-ink);
   flex-shrink: 0;
 }
 
@@ -801,7 +825,7 @@ h2 {
 }
 
 .footer-brand-name {
-  font-family: 'Space Grotesk', sans-serif;
+  font-family: 'Sora', sans-serif;
   font-size: 15px;
   font-weight: 600;
   letter-spacing: 0.02em;
@@ -1061,7 +1085,7 @@ h2 {
 }
 
 .contact-modal::backdrop {
-  background: rgba(15, 20, 14, 0.55);
+  background: rgba(15, 23, 42, 0.6);
 }
 
 .contact-modal-inner {

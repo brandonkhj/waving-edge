@@ -1,33 +1,33 @@
 :root {
-  /* Warm boutique-studio palette, matched to the reference design */
-  --canvas: #f6f2e9;
-  --canvas-warm: #efe8d8;
-  --surface-card: #fffdf8;
-  --surface-soft: #f1ebdd;
-  --surface-dark: #16231a;
-  --surface-dark-elevated: #223326;
-  --ink: #1c1d18;
-  --body: #57584e;
-  --muted: #85846f;
-  --muted-soft: #9a9884;
-  --hairline: #e4dcc8;
-  --hairline-soft: #ece5d3;
-  --primary: #16231a;
-  --primary-active: #263b2c;
-  --on-primary: #f6f2e9;
-  --on-dark: #f6f2e9;
-  --on-dark-soft: #b7c0b3;
-  /* Waving Edge brand accent — logo, dots, wave flourishes only. Never on CTAs. */
-  --accent: oklch(52% 0.09 200);
-  /* Badge pastels, cycled across service/solution icons */
-  --badge-mint-bg: #dcead9;
-  --badge-mint-ink: #3f7d5c;
-  --badge-sky-bg: #dbe7f0;
-  --badge-sky-ink: #3f6d94;
-  --badge-peach-bg: #f5e3cd;
-  --badge-peach-ink: #b8783c;
-  --badge-lavender-bg: #e6e0ef;
-  --badge-lavender-ink: #7a5fa0;
+  /* Waving Edge brand palette (see brand sheet).
+     NOTE: --accent (Aqua Teal) is DECORATION ONLY — wave strokes, dots, icon
+     flourishes. It measures 1.84:1 against --canvas, which fails WCAG AA, so it
+     must never carry text on a light surface. Use --ink or --primary instead.
+     On --surface-dark it is 9.29:1 and safe. */
+  --canvas: #f8fafc;              /* Off White  */
+  --canvas-warm: #eef2f7;
+  --surface-card: #ffffff;
+  --surface-soft: #eef2f7;
+  --surface-dark: #0f172a;        /* Charcoal   */
+  --surface-dark-elevated: #1c2840;
+  --ink: #0f172a;                 /* Charcoal   */
+  --body: #475569;
+  --muted: #64748b;               /* Slate      */
+  --muted-soft: #94a3b8;
+  --hairline: #e2e8f0;
+  --hairline-soft: #eef2f7;
+  --primary: #0b7c7a;             /* Deep Teal — 4.80:1 with --on-primary, passes AA */
+  --primary-active: #09615f;
+  --on-primary: #f8fafc;
+  --on-dark: #f8fafc;
+  --on-dark-soft: #94a3b8;
+  --accent: #15d1c1;              /* Aqua Teal — decorative only, see note above */
+  /* Service-card icon tints. The brand sheet defines no pastel set, so these are
+     cool tints derived from the palette rather than invented hues. */
+  --badge-teal-bg: #d5f0ed;   --badge-teal-ink: #0b7c7a;
+  --badge-cyan-bg: #d2eef5;   --badge-cyan-ink: #10788f;
+  --badge-blue-bg: #dce8f7;   --badge-blue-ink: #2f6499;
+  --badge-indigo-bg: #e1e5f4; --badge-indigo-ink: #4c5a91;
 }
 
 * {
