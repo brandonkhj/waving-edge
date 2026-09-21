@@ -833,6 +833,18 @@ h2 {
   color: var(--on-dark);
 }
 
+/* The wordmark above is uppercase with tracking; a 12-digit number inherits
+   that badly, so reset it and let it read as a quiet identifier. */
+.footer-reg {
+  font-family: 'Inter', sans-serif;
+  font-size: 12.5px;
+  font-weight: 400;
+  letter-spacing: 0;
+  text-transform: none;
+  color: var(--on-dark-soft);
+  white-space: nowrap;
+}
+
 .footer-tagline {
   font-size: 14px;
   line-height: 1.5;
