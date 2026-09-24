@@ -1,7 +1,23 @@
+import { useEffect, useRef } from 'react';
 import { useContactModal } from '../ContactModalContext.jsx';
 
 export default function Contact() {
   const { open: openContact } = useContactModal();
+  const wavesRef = useRef(null);
+
+  // waveDrift loops forever. prefers-reduced-motion already neutralises it, but
+  // for everyone else it keeps the compositor busy long after the band has
+  // scrolled away, so park it whenever it is out of view.
+  useEffect(() => {
+    const waves = wavesRef.current;
+    if (!waves || typeof IntersectionObserver === 'undefined') return undefined;
+
+    const observer = new IntersectionObserver(([entry]) => {
+      waves.style.animationPlayState = entry.isIntersecting ? 'running' : 'paused';
+    });
+    observer.observe(waves);
+    return () => observer.disconnect();
+  }, []);
 
   return (
     <section id="contact" className="contact">
@@ -11,6 +27,7 @@ export default function Contact() {
           height="120"
           viewBox="0 0 1800 120"
           className="final-cta-waves"
+          ref={wavesRef}
           aria-hidden="true"
         >
           <path

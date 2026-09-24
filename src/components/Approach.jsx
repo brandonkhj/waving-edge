@@ -1,3 +1,4 @@
+import PanelImage from './PanelImage.jsx';
 import { approachPoints } from '../data.jsx';
 
 export default function Approach() {
@@ -14,7 +15,7 @@ export default function Approach() {
         <ul className="approach-points">
           {approachPoints.map((point) => (
             <li key={point.label}>
-              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true" focusable="false">
                 {point.icon}
               </svg>
               {point.label}
@@ -24,10 +25,9 @@ export default function Approach() {
       </div>
 
       <div className="approach-panel">
-        <img
-          src="/images/approach.jpg"
+        <PanelImage
+          name="approach"
           alt="MacBook Pro on a desk beside a white iMac and Magic Mouse"
-          className="panel-photo"
         />
         <p className="approach-panel-caption">Good Software Better Business</p>
       </div>

@@ -1,0 +1,14 @@
+{
+  "approach": {
+    "width": 1200,
+    "height": 800
+  },
+  "hero": {
+    "width": 1200,
+    "height": 1500
+  },
+  "solutions": {
+    "width": 1200,
+    "height": 1600
+  }
+}

@@ -13,17 +13,19 @@
 
 ## Services
 
-- **Build a new product**: Turn an idea into a practical MVP or production-ready web app without
-  over-engineering the first version. SaaS platforms, MVPs, customer portals, web apps.
-- **Digitise business operations**: Replace spreadsheets, manual processes and disconnected tools
-  with software designed around actual workflows. Internal management systems, booking systems,
-  rental systems, inventory systems, operations dashboards.
-- **Integrations and automation**: Connect existing systems and remove repetitive manual work.
-  API integrations, payment gateways, SMS/messaging, email systems, Shopify integrations,
-  third-party services.
-- **Improve existing software**: Modernise, extend, maintain or repair software a business already
-  relies on. Feature development, UI modernisation, performance improvements, legacy system
-  improvements, ongoing maintenance.
+- **Build a new product** (https://www.wavingedge.com/services/build-a-new-product/): Turn an idea
+  into a practical MVP or production-ready web app without over-engineering the first version.
+  SaaS platforms, MVPs, customer portals, web apps.
+- **Digitise business operations** (https://www.wavingedge.com/services/digitise-business-operations/):
+  Replace spreadsheets, manual processes and disconnected tools with software designed around actual
+  workflows. Internal management systems, booking systems, rental systems, inventory systems,
+  operations dashboards.
+- **Integrations and automation** (https://www.wavingedge.com/services/integrations-and-automation/):
+  Connect existing systems and remove repetitive manual work. API integrations, payment gateways,
+  SMS/messaging, email systems, Shopify integrations, third-party services.
+- **Improve existing software** (https://www.wavingedge.com/services/improve-existing-software/):
+  Modernise, extend, maintain or repair software a business already relies on. Feature development,
+  UI modernisation, performance improvements, legacy system improvements, ongoing maintenance.
 
 ## Solutions
 

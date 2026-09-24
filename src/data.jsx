@@ -29,6 +29,17 @@ export const trustPoints = [
 export const services = [
   {
     title: 'Build a new product',
+    slug: 'build-a-new-product',
+    pageTitle: 'Build a new product',
+    lead:
+      'Turning an idea into working software is mostly a sequencing problem. The first version should prove the idea and carry real users — not carry every feature you will eventually want.',
+    fit: 'Founders and teams with an idea, a pilot customer or an internal proposal that needs to exist as working software.',
+    outcomes: [
+      'A scoped first release you can put in front of real users',
+      'Architecture that leaves room for the second and third versions',
+      'Deployment, environments and monitoring set up from the start',
+      'A backlog of what was deliberately left out, and why',
+    ],
     desc: 'Turn an idea into a practical MVP or production-ready web app without over-engineering the first version.',
     examples: ['SaaS platforms', 'MVPs', 'Customer portals', 'Web apps'],
     color: 'teal',
@@ -43,6 +54,17 @@ export const services = [
   },
   {
     title: 'Digitise business operations',
+    slug: 'digitise-business-operations',
+    pageTitle: 'Digitise business operations',
+    lead:
+      'Most operational software replaces a spreadsheet, a WhatsApp thread and a filing habit all at once. The job is to model how the work actually happens, not how a generic product assumes it happens.',
+    fit: 'Businesses running day-to-day operations on spreadsheets, manual handoffs or tools that do not talk to each other.',
+    outcomes: [
+      'One system covering the workflow end to end, instead of several partial ones',
+      'Roles and permissions that match how your team is actually organised',
+      'Reporting built on the data you already capture',
+      'A migration path off the spreadsheets, not a parallel system beside them',
+    ],
     desc: 'Replace spreadsheets, manual processes and disconnected tools with an app designed around your actual workflows.',
     examples: [
       'Internal management systems',
@@ -63,6 +85,17 @@ export const services = [
   },
   {
     title: 'Integrations and automation',
+    slug: 'integrations-and-automation',
+    pageTitle: 'Integrations and automation',
+    lead:
+      'Repetitive manual work is usually a sign that two systems that should be talking to each other are not. Integration work is less about the connection itself than about what happens when it fails.',
+    fit: 'Teams re-keying data between systems, or running a manual step that has to happen every day without fail.',
+    outcomes: [
+      'The manual step removed, with the systems kept in sync',
+      'Sensible handling of retries, failures and partial data',
+      'Credentials and webhooks managed properly rather than hardcoded',
+      'Visibility into what ran, what failed and what needs attention',
+    ],
     desc: 'Connect the systems you already use and remove repetitive, manual work.',
     examples: [
       'API integrations',
@@ -82,6 +115,17 @@ export const services = [
   },
   {
     title: 'Improve existing software',
+    slug: 'improve-existing-software',
+    pageTitle: 'Improve existing software',
+    lead:
+      'Software a business already depends on is rarely worth rewriting. It is usually worth understanding first — then extending, repairing or modernising in the places that are actually costing you.',
+    fit: 'Businesses with an app that works but is slow, dated, fragile, or that nobody is maintaining any more.',
+    outcomes: [
+      'A read on what the system does before anything is changed',
+      'The specific problems fixed, rather than a speculative rewrite',
+      'Dependencies and deployment brought back up to date',
+      'Handover notes so the next person is not starting from nothing',
+    ],
     desc: 'Modernise, extend, maintain or repair the app your business already relies on.',
     examples: [
       'Feature development',
@@ -169,3 +213,43 @@ export const aboutPoints = [
   { label: 'Direct and practical collaboration', icon: trustPoints[1].icon },
   { label: 'Committed to long-term support', icon: trustPoints[2].icon },
 ];
+
+/* The questions that otherwise get asked over email before anyone commits.
+   Rendered as native <details>/<summary>, so they are keyboard-operable with
+   no JavaScript, and mirrored into FAQPage JSON-LD by scripts/prerender.mjs. */
+export const faqs = [
+  {
+    q: 'What does a project usually cost?',
+    a: 'It depends on scope, but we scope before we quote. After the first conversation you get a written breakdown of the recommended solution, what it covers and the estimated effort — so you are comparing a real number against a real scope, not a range against a guess.',
+  },
+  {
+    q: 'How long does a first version take?',
+    a: 'Most first releases are measured in weeks rather than months, because the first version is deliberately scoped to prove the idea and carry real users. Larger operational systems take longer, and we say so during scoping rather than after.',
+  },
+  {
+    q: 'Who owns the code?',
+    a: 'You do. You get the repository, the deployment setup and the documentation. There is no lock-in to us as a vendor, and nothing in the stack that only we can maintain.',
+  },
+  {
+    q: 'Will you sign an NDA?',
+    a: 'Yes. Send yours over before the first conversation, or ask and we will provide one.',
+  },
+  {
+    q: 'What happens after launch?',
+    a: 'Launch is a milestone, not the end of the engagement. We continue improving, maintaining and supporting the app — and if you would rather take it in-house, the handover is part of the work, not an extra.',
+  },
+  {
+    q: 'Do you work with clients outside Malaysia?',
+    a: 'Yes. We are based in Malaysia and work with clients internationally. Most collaboration is asynchronous, with calls scheduled around your timezone.',
+  },
+];
+
+/* Social proof. Both arrays are intentionally empty — Proof.jsx renders nothing
+   until they are filled, because invented case studies and placeholder numbers
+   damage credibility more than an absent section does.
+
+   proofStats: [{ label: 'Projects delivered', value: '20+' }]
+   caseStudies: [{ title, problem, built, outcome }] — real projects only, with
+   the client's permission, or anonymised ('a Klang Valley rental operator'). */
+export const proofStats = [];
+export const caseStudies = [];

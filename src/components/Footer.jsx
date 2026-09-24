@@ -2,11 +2,11 @@ import WaveLogo from './WaveLogo.jsx';
 import { useContactModal } from '../ContactModalContext.jsx';
 
 const links = [
-  { href: '#top', label: 'Home' },
-  { href: '#services', label: 'Services' },
-  { href: '#solutions', label: 'Solutions' },
-  { href: '#about', label: 'About' },
-  { href: '#contact', label: 'Contact' },
+  { href: '/#top', label: 'Home' },
+  { href: '/#services', label: 'Services' },
+  { href: '/#solutions', label: 'Solutions' },
+  { href: '/#about', label: 'About' },
+  { href: '/#contact', label: 'Contact' },
 ];
 
 export default function Footer() {
@@ -17,7 +17,7 @@ export default function Footer() {
       <div className="footer-inner">
         <div className="footer-grid">
           <div className="footer-brand">
-            <a className="footer-brand-link" href="#top">
+            <a className="footer-brand-link" href="/#top">
               <WaveLogo height={30} onDark alt="" />
               <span className="footer-brand-name">Waving Edge Venture</span>
             </a>

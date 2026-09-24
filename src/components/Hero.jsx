@@ -1,3 +1,4 @@
+import PanelImage from './PanelImage.jsx';
 import { trustPoints } from '../data.jsx';
 import { useContactModal } from '../ContactModalContext.jsx';
 
@@ -27,7 +28,7 @@ export default function Hero() {
             {trustPoints.map((point) => (
               <li key={point.label}>
                 <span className="trust-icon">
-                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true" focusable="false">
                     {point.icon}
                   </svg>
                 </span>
@@ -38,10 +39,10 @@ export default function Hero() {
         </div>
 
         <div className="hero-panel">
-          <img
-            src="/images/hero.jpg"
+          <PanelImage
+            name="hero"
             alt="Desk setup with an iMac and MacBook showing design and code work, a Starbucks cup, and a plant"
-            className="panel-photo"
+            priority
           />
           <p className="hero-panel-caption">
             Ideas
