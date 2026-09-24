@@ -16,7 +16,7 @@ export default function About() {
       <ul className="about-points">
         {aboutPoints.map((point) => (
           <li key={point.label}>
-            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true" focusable="false">
               {point.icon}
             </svg>
             {point.label}

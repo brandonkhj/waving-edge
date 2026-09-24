@@ -29,14 +29,19 @@ export default function Services() {
                 strokeWidth="1.8"
                 strokeLinecap="round"
                 strokeLinejoin="round"
+                aria-hidden="true"
+                focusable="false"
               >
                 {svc.icon}
               </svg>
             </div>
             <h3>{svc.title}</h3>
             <p>{svc.desc}</p>
-            <a href="#solutions" className="card-link">
-              Learn more →
+            <a href={`/services/${svc.slug}/`} className="card-link">
+              Learn more
+              {/* Four cards each said only "Learn more"; the hidden suffix gives
+                  the link a distinct accessible name without changing the design. */}
+              <span className="visually-hidden"> about {svc.title}</span> →
             </a>
           </div>
         ))}

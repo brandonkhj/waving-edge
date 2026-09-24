@@ -1,10 +1,9 @@
 .page {
-  min-height: 100vh;
+  min-height: 100dvh;
 }
 
-section {
-  scroll-margin-top: 76px;
-}
+/* Anchor and focus offsets come from scroll-padding-top on <html> (index.css).
+   Keeping scroll-margin-top here as well would offset the same scroll twice. */
 
 h1,
 h2 {
@@ -20,8 +19,8 @@ h2 {
   align-items: center;
   justify-content: space-between;
   height: 72px;
-  padding: 0 48px;
-  max-width: 1240px;
+  padding: 0 var(--space-gutter);
+  max-width: var(--measure);
   margin: 0 auto;
   position: sticky;
   top: 0;
@@ -40,12 +39,6 @@ h2 {
 
 .brand:hover {
   opacity: 0.8;
-}
-
-.brand:focus-visible {
-  outline: 2px solid var(--primary);
-  outline-offset: 6px;
-  border-radius: 4px;
 }
 
 .wave-logo {
@@ -90,6 +83,24 @@ h2 {
 
 .nav-link:hover {
   color: var(--ink);
+}
+
+/* Scrollspy marks the section currently in view (Header.jsx). The underline is
+   drawn on a pseudo-element so turning it on never changes the link's height. */
+.nav-link[aria-current] {
+  color: var(--ink);
+  position: relative;
+}
+
+.nav-link[aria-current]::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: -6px;
+  height: 2px;
+  border-radius: 1px;
+  background: var(--primary);
 }
 
 .btn-cta {
@@ -149,9 +160,9 @@ h2 {
 /* Hero — split layout: text left, panel right */
 
 .hero {
-  max-width: 1240px;
+  max-width: var(--measure);
   margin: 0 auto;
-  padding: 0 48px;
+  padding: 0 var(--space-gutter);
   position: relative;
 }
 
@@ -260,7 +271,7 @@ h2 {
   display: flex;
   align-items: center;
   gap: 8px;
-  font-size: 13px;
+  font-size: var(--text-xs);
   font-weight: 500;
   color: var(--body);
 }
@@ -298,6 +309,14 @@ h2 {
   display: flex;
   align-items: flex-end;
   padding: 32px;
+}
+
+/* <picture> generates no box of its own, so .panel-photo keeps positioning
+   against the panel exactly as it did when it was a bare <img>. */
+.hero-panel picture,
+.approach-panel picture,
+.solutions-panel picture {
+  display: contents;
 }
 
 .panel-photo {
@@ -381,7 +400,7 @@ h2 {
 }
 
 .section-intro {
-  font-size: 15px;
+  font-size: var(--text-base);
   line-height: 1.55;
   color: var(--muted);
   margin: 14px 0 0;
@@ -395,8 +414,8 @@ h2 {
 /* Services */
 
 .services {
-  padding: 88px 48px;
-  max-width: 1240px;
+  padding: var(--space-section) var(--space-gutter);
+  max-width: var(--measure);
   margin: 0 auto;
 }
 
@@ -445,7 +464,7 @@ h2 {
 }
 
 .service-card p {
-  font-size: 13.5px;
+  font-size: var(--text-sm);
   line-height: 1.55;
   color: var(--body);
   margin: 0 0 16px;
@@ -474,9 +493,9 @@ h2 {
 /* Approach */
 
 .approach {
-  max-width: 1240px;
+  max-width: var(--measure);
   margin: 0 auto;
-  padding: 88px 48px;
+  padding: var(--space-section) var(--space-gutter);
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 64px;
@@ -532,11 +551,11 @@ h2 {
 /* Process */
 
 .process {
-  padding: 88px 48px;
+  padding: var(--space-section) var(--space-gutter);
 }
 
 .process-inner {
-  max-width: 1240px;
+  max-width: var(--measure);
   margin: 0 auto;
 }
 
@@ -594,7 +613,7 @@ h2 {
 }
 
 .process-step p {
-  font-size: 13px;
+  font-size: var(--text-xs);
   line-height: 1.5;
   color: var(--body);
   margin: 0;
@@ -604,9 +623,9 @@ h2 {
 /* Solutions — panel left, checklist right */
 
 .solutions {
-  max-width: 1240px;
+  max-width: var(--measure);
   margin: 0 auto;
-  padding: 88px 48px;
+  padding: var(--space-section) var(--space-gutter);
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 64px;
@@ -662,17 +681,24 @@ h2 {
 /* Technology */
 
 .tech {
-  padding: 72px 48px;
+  padding: var(--space-section) var(--space-gutter);
   background: var(--surface-soft);
 }
 
 .tech-inner {
-  max-width: 1240px;
+  max-width: var(--measure);
   margin: 0 auto;
 }
 
 .tech-head {
   margin-bottom: 36px;
+}
+
+/* This is the only .section-intro sitting on a tinted surface. --muted on
+   --surface-soft measures 4.23:1, under the 4.5:1 AA floor for normal text;
+   --body is 6.74:1 on the same background. */
+.tech-head .section-intro {
+  color: var(--body);
 }
 
 .tech-pills {
@@ -688,9 +714,9 @@ h2 {
 .tech-pills li {
   background: var(--surface-card);
   border: 1px solid var(--hairline);
-  border-radius: 9999px;
+  border-radius: var(--radius-pill);
   padding: 8px 18px;
-  font-size: 13.5px;
+  font-size: var(--text-sm);
   font-weight: 500;
   color: var(--ink);
 }
@@ -698,8 +724,8 @@ h2 {
 /* About / credibility */
 
 .about {
-  padding: 88px 48px;
-  max-width: 1240px;
+  padding: var(--space-section) var(--space-gutter);
+  max-width: var(--measure);
   margin: 0 auto;
   display: grid;
   grid-template-columns: 1.3fr 1fr;
@@ -749,15 +775,16 @@ h2 {
 /* Contact — final CTA band (dark) */
 
 .contact {
-  max-width: 1240px;
+  max-width: var(--measure);
   margin: 0 auto;
-  padding: 0 48px 96px;
+  padding: 0 var(--space-gutter) var(--space-section);
 }
 
 .final-cta {
   position: relative;
   overflow: hidden;
   background: var(--surface-dark);
+  --focus-ring: var(--accent);
   border-radius: 20px;
   padding: 64px 48px;
   text-align: center;
@@ -816,11 +843,13 @@ h2 {
 .site-footer {
   background: var(--surface-dark);
   color: var(--on-dark-soft);
-  padding: 64px 48px 32px;
+  padding: var(--space-9) var(--space-gutter) var(--space-6);
+  /* --primary is only 1.94:1 on charcoal; --accent is 9.29:1. */
+  --focus-ring: var(--accent);
 }
 
 .footer-inner {
-  max-width: 1240px;
+  max-width: var(--measure);
   margin: 0 auto;
 }
 
@@ -853,14 +882,6 @@ h2 {
 
 .footer-brand-link:hover {
   opacity: 0.8;
-}
-
-.footer-brand-link:focus-visible {
-  /* On --surface-dark the accent measures 9.29:1, so it is safe here; it would
-     not be on the light header, which uses --primary instead. */
-  outline: 2px solid var(--accent);
-  outline-offset: 6px;
-  border-radius: 4px;
 }
 
 .footer-brand-name {
@@ -961,6 +982,264 @@ h2 {
   color: var(--muted-soft);
 }
 
+/* FAQ */
+
+.faq {
+  padding: var(--space-section) var(--space-gutter);
+  background: var(--surface-soft);
+}
+
+.faq-inner {
+  max-width: 760px;
+  margin: 0 auto;
+}
+
+.faq-list {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+}
+
+.faq-item {
+  background: var(--surface-card);
+  border: 1px solid var(--hairline);
+  border-radius: var(--radius-md);
+  padding: 0 var(--space-5);
+}
+
+.faq-item summary {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-4);
+  padding: 18px 0;
+  cursor: pointer;
+  font-size: var(--text-base);
+  font-weight: 600;
+  color: var(--ink);
+  /* The default marker would sit beside our own chevron. */
+  list-style: none;
+}
+
+.faq-item summary::-webkit-details-marker {
+  display: none;
+}
+
+.faq-chevron {
+  flex-shrink: 0;
+  stroke: var(--muted);
+  transition: transform 0.2s ease;
+}
+
+.faq-item[open] .faq-chevron {
+  transform: rotate(180deg);
+}
+
+.faq-item p {
+  margin: 0;
+  padding: 0 0 20px;
+  font-size: var(--text-base);
+  line-height: 1.6;
+  color: var(--body);
+  max-width: 62ch;
+  text-wrap: pretty;
+}
+
+/* Proof — hidden until data.jsx carries real projects */
+
+.proof {
+  padding: var(--space-section) var(--space-gutter);
+  max-width: var(--measure);
+  margin: 0 auto;
+}
+
+.proof-stats {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+  gap: var(--space-5);
+  margin: 0 0 var(--space-8);
+  padding: 0;
+}
+
+.proof-stat {
+  text-align: center;
+}
+
+.proof-stat dd {
+  margin: 0;
+  font-family: 'Sora', 'Inter', sans-serif;
+  font-size: 32px;
+  font-weight: 600;
+  color: var(--ink);
+  line-height: 1.1;
+}
+
+.proof-stat dt {
+  order: 2;
+  font-size: var(--text-sm);
+  color: var(--muted);
+  margin-top: var(--space-2);
+}
+
+.proof-stat {
+  display: flex;
+  flex-direction: column;
+}
+
+.proof-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: var(--space-5);
+}
+
+.proof-card {
+  background: var(--surface-card);
+  border: 1px solid var(--hairline);
+  border-radius: var(--radius-lg);
+  padding: var(--space-5);
+}
+
+.proof-card h3 {
+  font-size: var(--text-md);
+  font-weight: 600;
+  line-height: 1.35;
+  margin: 0 0 var(--space-4);
+  color: var(--ink);
+}
+
+.proof-card p {
+  font-size: var(--text-sm);
+  line-height: 1.55;
+  color: var(--body);
+  margin: 0 0 var(--space-3);
+  text-wrap: pretty;
+}
+
+.proof-label {
+  display: block;
+  font-size: var(--text-xs);
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--muted);
+  margin-bottom: 2px;
+}
+
+/* Service pages */
+
+.service-page {
+  max-width: var(--measure);
+  margin: 0 auto;
+  padding: var(--space-6) var(--space-gutter) var(--space-section);
+}
+
+.breadcrumb {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: var(--space-2);
+  font-size: var(--text-sm);
+  color: var(--muted);
+  margin-bottom: var(--space-7);
+}
+
+.breadcrumb a {
+  color: var(--body);
+  text-decoration: none;
+}
+
+.breadcrumb a:hover {
+  color: var(--ink);
+  text-decoration: underline;
+}
+
+.breadcrumb [aria-current='page'] {
+  color: var(--ink);
+  font-weight: 500;
+}
+
+.service-page-head {
+  max-width: 680px;
+  margin-bottom: var(--space-9);
+}
+
+.service-page-head .service-icon {
+  margin-bottom: var(--space-5);
+}
+
+.service-page-head h1 {
+  font-size: clamp(30px, 4vw, 44px);
+  line-height: 1.1;
+  letter-spacing: -1.2px;
+  margin: 0 0 var(--space-4);
+  text-wrap: pretty;
+}
+
+.service-page-lead {
+  font-size: var(--text-md);
+  line-height: 1.6;
+  color: var(--body);
+  margin: 0 0 var(--space-6);
+  text-wrap: pretty;
+}
+
+.service-page-grid {
+  display: grid;
+  grid-template-columns: 1.1fr 0.9fr;
+  gap: var(--space-9);
+  align-items: start;
+}
+
+.service-page-side {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-8);
+}
+
+.service-page-block h2 {
+  font-size: clamp(20px, 2.6vw, 24px);
+  line-height: 1.25;
+  letter-spacing: -0.4px;
+  margin: 0 0 var(--space-5);
+}
+
+.service-page-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-4);
+}
+
+.service-page-list li {
+  display: flex;
+  align-items: flex-start;
+  gap: var(--space-3);
+  font-size: var(--text-base);
+  line-height: 1.5;
+  color: var(--ink);
+  text-wrap: pretty;
+}
+
+.service-page-list svg {
+  stroke: var(--badge-teal-ink);
+  flex-shrink: 0;
+  margin-top: 3px;
+}
+
+.service-page-pills {
+  justify-content: flex-start;
+}
+
+.service-page-fit {
+  font-size: var(--text-base);
+  line-height: 1.6;
+  color: var(--body);
+  margin: 0;
+  text-wrap: pretty;
+}
+
 /* Mobile */
 
 @media (max-width: 900px) {
@@ -985,10 +1264,6 @@ h2 {
 }
 
 @media (max-width: 820px) {
-  .site-header {
-    padding: 0 24px;
-  }
-
   .menu-toggle {
     display: block;
   }
@@ -1004,7 +1279,7 @@ h2 {
     background: var(--canvas);
     border-top: 1px solid var(--hairline);
     border-bottom: 1px solid var(--hairline);
-    padding: 8px 24px 20px;
+    padding: 8px var(--space-gutter) 20px;
     opacity: 0;
     transform: translateY(-8px);
     visibility: hidden;
@@ -1030,22 +1305,9 @@ h2 {
     padding: 14px 20px;
   }
 
-  .hero {
-    padding: 0 24px;
-  }
-
   .hero-grid {
     padding: 40px 0 56px;
     gap: 36px;
-  }
-
-  .services,
-  .solutions,
-  .process,
-  .tech,
-  .about,
-  .approach {
-    padding: 56px 24px;
   }
 
   .section-head,
@@ -1061,6 +1323,11 @@ h2 {
 
   .services-grid {
     grid-template-columns: 1fr;
+  }
+
+  .service-page-grid {
+    grid-template-columns: 1fr;
+    gap: var(--space-8);
   }
 
   .process-grid {
@@ -1081,10 +1348,6 @@ h2 {
     max-width: none;
   }
 
-  .contact {
-    padding: 0 24px 56px;
-  }
-
   .final-cta {
     padding: 44px 24px;
   }
@@ -1100,7 +1363,7 @@ h2 {
   }
 
   .site-footer {
-    padding: 48px 24px 32px;
+    padding: var(--space-7) var(--space-gutter) var(--space-6);
   }
 }
 

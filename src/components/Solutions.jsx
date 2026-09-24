@@ -1,3 +1,4 @@
+import PanelImage from './PanelImage.jsx';
 import { solutions } from '../data.jsx';
 import { useContactModal } from '../ContactModalContext.jsx';
 
@@ -7,11 +8,7 @@ export default function Solutions() {
   return (
     <section id="solutions" className="solutions">
       <div className="solutions-panel">
-        <img
-          src="/images/solutions.jpg"
-          alt="Green plant near a laptop computer"
-          className="panel-photo"
-        />
+        <PanelImage name="solutions" alt="Green plant near a laptop computer" />
         <p className="solutions-panel-caption">From ideas to real solutions</p>
       </div>
 
@@ -25,7 +22,7 @@ export default function Solutions() {
         <ul className="solutions-list">
           {solutions.map((sol) => (
             <li key={sol.label}>
-              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true" focusable="false">
                 {sol.icon}
               </svg>
               {sol.label}
@@ -33,7 +30,7 @@ export default function Solutions() {
           ))}
         </ul>
         <button type="button" className="card-link" onClick={openContact}>
-          Explore all solutions →
+          Discuss your project →
         </button>
       </div>
     </section>
